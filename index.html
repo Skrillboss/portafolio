@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=4, initial-scale=1.0">
     <title>Portafolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -15,51 +16,57 @@
         </aside>
         <nav>
             <ul>
-                <li>PRINCIPAL</li>
-                <li>SOBRE MI</li>
-                <li>PROYECTOS</li>
-                <li>CONTACTAME</li>
+                <li><a href="#principal">PRINCIPAL</a></li>
+                <li><a href="#sobreMi">SOBRE MI</a></li>
+                <li><a href="#proyectos">PROYECTOS</a></li>
+                <li><a href="#contactame">CONTACTAME</a></li>
             </ul>
         </nav>
     </header>
-    <section>
+    <section class="principal" id="principal">
         <article>
-            <h1>
-                <span>DESARROLLADOR WEB</span>
-                <br>
-                Front-End y Back-End
-            </h1>
+            <div>
+                <h1>
+                    <span>DESARROLLADOR WEB</span>
+                    <br>
+                    Front-End y Back-End
+                </h1>
+                <button href ="contactame" class="boton">
+                    <a href="#contactame">Contactame</a>
+                </button>
+            </div>
+            <img src="img/computadora.png" alt="Icono de una computadora">
         </article>
-        <article>
-            <div class="computadora"></div>
-        </article>
+
     </section>
-    <main>
-        <h2>Sobre mi</h2>
-        <h3>¿Que servicios puedo ofrecer?</h3>
-        <article>
-            <h4>Desarrollador Web con más de
-                2 años de experiencia
-            </h4>
-            <p>
-                Realizo proyectos personales
-                con el fin de ampliar mis conocimientos,
-                enfrentandome a diferentes problemas y
-                buscando la solucion de los mismos.
-            </p>
-            <p>
-                Conocimientos en Html, Css, JavaScript,
-                Php y mySQL.
-            </p>
-            <P>
-                Buscando pertenecer a un grupo de proyecto
-                para poder obtener experiencia laboral y poco
-                a poco irme desenvolviendo en el mundo laboral
-                del desarrollo, afianzando mis conocimientos y
-                poniendolos a prueba.
-            </P>
-        </article>
-    </main>
+    <div class="contenedor">
+        <main id="sobreMi">
+            <h2>Sobre mi</h2>
+            <h3>¿Que servicios puedo ofrecer?</h3>
+            <article>
+                <h4>Desarrollador Web con más de
+                    2 años de experiencia
+                </h4>
+                <p>
+                    Realizo proyectos personales
+                    con el fin de ampliar mis conocimientos,
+                    enfrentandome a diferentes problemas y
+                    buscando la solucion de los mismos.
+                </p>
+                <p>
+                    Conocimientos en Html, Css, JavaScript,
+                    Php y mySQL.
+                </p>
+                <P>
+                    Buscando pertenecer a un grupo de proyecto
+                    para poder obtener experiencia laboral y poco
+                    a poco irme desenvolviendo en el mundo laboral
+                    del desarrollo, afianzando mis conocimientos y
+                    poniendolos a prueba.
+                </P>
+            </article>
+        </main>
+    </div>
 
     <section>
         <h2>Conocimientos y habilidades <em>adquiridas</em></h2>
@@ -85,13 +92,13 @@
 
         <a href="../Luis/CV_DAW.pdf">Desacargar CV</a>
     </section>
-    <section>
+    <section class="proyectos" id="proyectos">
         <h2>Proyectos</h2>
         <p>aqui debo colocar mis proyectos <br> con imagenes y todo bien chingon</p>
     </section>
 
 
-    <section>
+    <section class="contactame" id="contactame">
         <div class="contacto"></div>
         <form action="post">
             <fieldset>
@@ -113,8 +120,12 @@
         <footer>
             <article>
                 <ul>
-                    <li><a href="tel:+34655817730"><div class="telefono"></div>(+34) 659 124 454</a></li>
-                    <li><a href="mailto:heredialuis20@gmail.com"><div class="correo"></div>heredialuis20@gmail.com</a></li>
+                    <li><a href="tel:+34655817730">
+                            <div class="telefono"></div>(+34) 659 124 454
+                        </a></li>
+                    <li><a href="mailto:heredialuis20@gmail.com">
+                            <div class="correo"></div>heredialuis20@gmail.com
+                        </a></li>
                 </ul>
             </article>
             <aside>

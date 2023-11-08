@@ -1,0 +1,151 @@
+body {
+    position: relative;
+    margin: 0;
+    background: #F8AF75;
+}
+
+header {
+    position: fixed;
+    background: #F9A470;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 6.15rem;
+    height: 4.2rem;
+    width: 100vw;
+    z-index: 1;
+}
+
+header > aside:first-child{
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+
+}
+
+nav {
+    width: 35rem;
+    margin-right: 13.3rem;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+li a {
+    color: #FEEDE2;
+    text-decoration: none;
+
+}
+
+.principal article {
+
+    display: flex;
+    justify-content: space-between;
+    padding: 4.5rem 6rem 0 6rem;
+    min-height: 53vh;
+    align-items: center;
+}
+
+h1 {
+    display: block;
+    font-size: 2rem;
+    color: #FFFFFF;
+
+}
+
+
+h1 span {
+
+    background: var(--celeste-claro);
+    color: var(--azul-marino-oscuro);
+    width: 31.5rem;
+    font-size: 3.2rem;
+    background: #9FD4CA;
+    color: #354355;
+
+}
+
+.boton {
+    border: 0;
+    background-image: linear-gradient(150deg,
+            #ff7300,
+            #f5870a,
+            #F8AF75);
+    border-radius: 8px;
+    color: #fff;
+    display: flex;
+    font-size: 18px;
+    padding: 4px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.boton a {
+    background-color: #111;
+    padding: 16px 24px;
+    border-radius: 6px;
+    transition: .3s;
+    text-decoration: none;
+    color: inherit;
+
+}
+
+.boton:hover a {
+    background: none;
+}
+
+.boton:active {
+    transition: .1s;
+    transform: scale(0.9);
+
+}
+
+article img {
+
+    position: relative;
+    top: 8px;
+
+}
+
+.contenedor {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+main {
+
+    width: 57rem;
+    height: 45vh;
+    background-color: #FFFFFF;
+    box-shadow: -200px 0 0 0px #9FD4CA, -230px 0 0 0px #F48E4F;
+    padding: 0 5rem 2rem 15rem;
+    padding-left: 15rem;
+    border-radius: 20px 0 0 20px;
+    min-height: 33rem;
+}
+
+main h2:first-child {
+    border-bottom: 1px solid #9FD4CA;
+    width: 34%;
+    font-size: 42px;
+    color: #F8AF75;
+    padding-bottom: 3px;
+}
+
+main h3 {
+    border-bottom: 1px solid #F48E4F;
+    width: 60%;
+    font-size: 25px;
+    color: #9FD4CA;
+    padding-bottom: 4px;
+}
+
+main h4 {
+    margin: 1rem 0;
+    font-size: 42px;
+}
