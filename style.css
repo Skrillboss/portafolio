@@ -1,48 +1,37 @@
 body {
-    position: relative;
+
     margin: 0;
     background: #F8AF75;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-header {
-    position: fixed;
+.cabeceraMobile{
+    display: none;
+}
+
+.cabeceraPrincipal{
+    display: flex;
+    min-height: 4.2rem;
     background: #F9A470;
-    display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    padding-left: 6.15rem;
-    height: 4.2rem;
-    width: 100vw;
-    z-index: 1;
 }
 
-header > aside:first-child{
-    color: #fff;
-    font-size: 25px;
-    font-weight: bold;
-
-}
-
-nav {
-    width: 35rem;
-    margin-right: 13.3rem;
-}
-
-ul {
+aside{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    list-style-type: none;
+    align-items: center;
 }
 
-li a {
-    color: #FEEDE2;
-    text-decoration: none;
+aside img{
+    height: 50px;
+}
 
+nav a{
+    text-decoration: none;
+    margin-left: 10px;
 }
 
 .principal article {
-
     display: flex;
     justify-content: space-between;
     padding: 4.5rem 6rem 0 6rem;
@@ -51,7 +40,6 @@ li a {
 }
 
 h1 {
-    display: block;
     font-size: 2rem;
     color: #FFFFFF;
 
@@ -104,11 +92,17 @@ h1 span {
 
 }
 
-article img {
+.contenedorComputadora{
+    align-self: flex-end;
+    width: 41.8vw;
+    max-width: 520px;
+}
 
+article img {
     position: relative;
     top: 8px;
-
+    max-width: 100%;
+    height: auto;
 }
 
 .contenedor {
@@ -148,4 +142,164 @@ main h3 {
 main h4 {
     margin: 1rem 0;
     font-size: 42px;
+}
+
+.segundoContenedor {
+    background: #343233;
+    padding: 4rem 8rem;
+    margin: 8rem 0;
+}
+
+.habilidades>h2:first-child {
+
+    color: #EFEAE1;
+    background: url(/img/fondoHabilidades.png);
+    background-repeat: no-repeat;
+    font-size: 32px;
+    margin-bottom: 2rem;
+
+}
+
+.habilidades article div {
+    display: flex;
+    height: 52px;
+}
+
+.habilidades article img:first-child {
+    margin-right: 1rem;
+    width: 30px;
+    height: 28px;
+    padding: 5px;
+    background: #4F4B4B;
+    border-radius: 8px;
+}
+
+.habilidades article h3{
+    font-size: 28px;
+    align-self: center;
+    color: #9FD4CA;
+
+}
+
+.habilidades ul{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 5px 56px;
+    color: #FFDEAD;
+    font-size: 22px;
+}
+
+.habilidades ul li{
+    margin: .4rem 0;
+}
+
+.habilidades .boton{
+    background-image: linear-gradient(150deg,
+    #395dff,
+    #9FD4CA,
+    #343233);
+    font-size: 15px;
+    padding: 3px;
+    margin: 13px 54px;
+}
+
+.contactame{
+    display: flex;
+    height: 90vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background: #343233;
+
+}
+
+form{
+
+}
+
+fieldset{
+    display: flex;
+    border: 2px solid #9FD4CA;
+    height: 45vh;
+    width: 14vw;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+legend h2{
+    color: #EFEAE1;
+    padding: 0 4px;
+    border-left: 1px solid #9FD4CA;
+    border-right: 1px solid #9FD4CA;
+}
+
+fieldset input{
+    border-radius: 8px;
+    border: 3px solid ;
+    background: none;
+    text-align: center;
+    min-height: 7%;
+}
+
+fieldset input::placeholder{
+    color: #9FD4CA;
+    text-align: center;
+
+}
+
+fieldset .empresa{
+    width: 70%;
+}
+
+fieldset .correo{
+    width: 90%;
+}
+
+fieldset .mensaje{
+    height: 100px;
+}
+
+fieldset .mensaje{
+    height: 50%;
+    width: 95%;
+}
+
+@media screen and (max-width: 680px){
+
+    .contenedorComputadora{
+        width: 0;
+    }
+
+    .cabeceraPrincipal{
+        display: none;
+    }
+
+    .cabeceraMobile{
+        position: absolute;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cabeceraMobile nav{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: space-evenly;
+        align-items: center;
+        background: #ff7300;
+        text-decoration: none;
+        color: #fff;
+        clip-path: circle(0% at top left);
+        transition: clip-path .4s;
+    }
+
+    .cabeceraMobile nav:target{
+        clip-path: circle(150% at top left);
+    }
+   
+    
 }

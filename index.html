@@ -6,23 +6,34 @@
     <meta name="viewport" content="width=4, initial-scale=1.0">
     <title>Portafolio</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
-
-    <header>
+    <header class="cabeceraMobile">
+        <a class="menuMobile" href="#menu">
+            <img src="img/menuMobile.png" alt="">
+        </a>
+        <nav class="navMobile" id="menu">
+            <a href="#principal">PRINCIPAL</a>
+            <a href="#sobreMi">SOBRE MI</a>
+            <a href="#proyectos">PROYECTOS</a>
+            <a href="#contactame">CONTACTAME</a>
+        </nav>
+    </header>
+    <header class="cabeceraPrincipal">
         <aside>
+            <a href="#"><img src="img/logoGitHub.png" alt=""></a>
             LUIS HEREDIA
         </aside>
         <nav>
-            <ul>
-                <li><a href="#principal">PRINCIPAL</a></li>
-                <li><a href="#sobreMi">SOBRE MI</a></li>
-                <li><a href="#proyectos">PROYECTOS</a></li>
-                <li><a href="#contactame">CONTACTAME</a></li>
-            </ul>
+            <a href="#principal">PRINCIPAL</a>
+            <a href="#sobreMi">SOBRE MI</a>
+            <a href="#proyectos">PROYECTOS</a>
+            <a href="#contactame">CONTACTAME</a>
         </nav>
     </header>
+
     <section class="principal" id="principal">
         <article>
             <div>
@@ -31,11 +42,13 @@
                     <br>
                     Front-End y Back-End
                 </h1>
-                <button href ="contactame" class="boton">
+                <button class="boton">
                     <a href="#contactame">Contactame</a>
                 </button>
             </div>
-            <img src="img/computadora.png" alt="Icono de una computadora">
+            <div class="contenedorComputadora">
+                <img src="img/computadora.png" alt="Icono de una computadora">
+            </div>
         </article>
 
     </section>
@@ -67,50 +80,58 @@
             </article>
         </main>
     </div>
-
-    <section>
-        <h2>Conocimientos y habilidades <em>adquiridas</em></h2>
-        <article>
-            <h3>Desarrollo web Front-End</h3>
-            <ul>
-                <li>HTML5</li>
-                <li>CSS, FlexBox, cuadrícula CSS</li>
-                <li>JavaScript, POO</li>
-                <li>Diseño web adaptable</li>
-                <li>Control e versiones</li>
-                <li>Git y GitHub</li>
-            </ul>
-        </article>
-        <article>
-            <h3>Desarrollo web Back-End</h3>
-            <ul>
-                <li>base de daots mySQL</li>
-                <li>Php, POO</li>
-                <li>Entorno de servidor WAMP y XAMPP</li>
-            </ul>
-        </article>
-
-        <a href="../Luis/CV_DAW.pdf">Desacargar CV</a>
-    </section>
-    <section class="proyectos" id="proyectos">
-        <h2>Proyectos</h2>
-        <p>aqui debo colocar mis proyectos <br> con imagenes y todo bien chingon</p>
-    </section>
-
+    <div class="segundoContenedor">
+        <section class="habilidades">
+            <h2>Conocimientos y habilidades adquiridas</h2>
+            <article>
+                <div>
+                    <img src="/img/iconoFront-end.jpg" alt="">
+                    <h3>Desarrollo web Front-End</h3>
+                </div>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS, FlexBox, cuadrícula CSS</li>
+                    <li>JavaScript, POO</li>
+                    <li>Diseño web adaptable</li>
+                    <li>Control e versiones</li>
+                    <li>Git y GitHub</li>
+                </ul>
+            </article>
+            <article>
+                <div>
+                    <img src="/img/iconoBack-End.png" alt="">
+                    <h3>Desarrollo web Back-End</h3>
+                </div>
+                <ul>
+                    <li>base de daots mySQL</li>
+                    <li>Php, POO</li>
+                    <li>Entorno de servidor WAMP y XAMPP</li>
+                </ul>
+            </article>
+            <button class="boton">
+                <a href="../Luis/CV_DAW.pdf">Desacargar CV</a>
+            </button>
+        </section>
+        <section class="proyectos" id="proyectos">
+            <h2>Proyectos</h2>
+            <p>aqui debo colocar mis proyectos <br> con imagenes y todo bien chingon</p>
+        </section>
+    </div>
 
     <section class="contactame" id="contactame">
-        <div class="contacto"></div>
         <form action="post">
             <fieldset>
                 <legend>
                     <h2>Contato</h2>
-                    <label for="nombre">Empresa:</label>
-                    <input type="text" name="nombre" placeholder="Nombre"><br>
-                    <label for="nombre">Email:</label>
-                    <input type="email" name="nombre" placeholder="Correo electronico"><br>
-                    <label for="nombre">Mensaje:</label>
-                    <input type="text" name="nombre" placeholder="Escriba su mensaje aqui...">
                 </legend>
+                <label for="nombre"></label>
+                <input type="text" name="empresa" placeholder="empresa" class="empresa">
+                <label for="correo"></label>
+                <input type="email" name="correo" placeholder="correo" class="correo">
+                <label for="asunto"></label>
+                <input type="text" name="asunto" placeholder="asunto" class="asunto">
+                <label for="mensaje"></label>
+                <input type="text" name="mensaje" placeholder="mensaje" class="mensaje">
             </fieldset>
             <button type="submit">ENVIAR</button>
         </form>
