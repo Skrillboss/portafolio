@@ -5,11 +5,13 @@ body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.cabeceraMobile{
+/* cabecera de busqueda del portafolio */
+
+.cabeceraMobile {
     display: none;
 }
 
-.cabeceraPrincipal{
+.cabeceraPrincipal {
     display: flex;
     min-height: 4.2rem;
     background: #F9A470;
@@ -17,19 +19,22 @@ body {
     align-items: center;
 }
 
-aside{
+aside {
     display: flex;
     align-items: center;
 }
 
-aside img{
+aside img {
     height: 50px;
 }
 
-nav a{
+nav a {
     text-decoration: none;
     margin-left: 10px;
 }
+
+/* presentacion del portafolio */
+
 
 .principal article {
     display: flex;
@@ -70,6 +75,11 @@ h1 span {
     padding: 4px;
     cursor: pointer;
     transition: .3s;
+
+    &:active {
+        transition: .1s;
+        transform: scale(0.9);
+    }
 }
 
 .boton a {
@@ -80,19 +90,13 @@ h1 span {
     text-decoration: none;
     color: inherit;
 
+    &:hover {
+        background: none;
+    }
 }
 
-.boton:hover a {
-    background: none;
-}
 
-.boton:active {
-    transition: .1s;
-    transform: scale(0.9);
-
-}
-
-.contenedorComputadora{
+.contenedorComputadora {
     align-self: flex-end;
     width: 41.8vw;
     max-width: 520px;
@@ -103,22 +107,23 @@ article img {
     top: 8px;
     max-width: 100%;
     height: auto;
+    animation: caer;
+    animation-duration: 2.5s;
+    animation-timing-function: cubic-bezier(0.02, -0.07, 1, 1.4)
 }
+
+/* articulo de sobre mi */
 
 .contenedor {
     display: flex;
     justify-content: flex-end;
-
 }
 
 main {
-
     width: 57rem;
-    height: 45vh;
+    min-height: 45vh;
     background-color: #FFFFFF;
     box-shadow: -200px 0 0 0px #9FD4CA, -230px 0 0 0px #F48E4F;
-    padding: 0 5rem 2rem 15rem;
-    padding-left: 15rem;
     border-radius: 20px 0 0 20px;
     min-height: 33rem;
 }
@@ -144,7 +149,10 @@ main h4 {
     font-size: 42px;
 }
 
+/* articulo de mis conocimientos y habilidades */
+
 .segundoContenedor {
+
     background: #343233;
     padding: 4rem 8rem;
     margin: 8rem 0;
@@ -174,14 +182,14 @@ main h4 {
     border-radius: 8px;
 }
 
-.habilidades article h3{
+.habilidades article h3 {
     font-size: 28px;
     align-self: center;
     color: #9FD4CA;
 
 }
 
-.habilidades ul{
+.habilidades ul {
     display: flex;
     flex-direction: column;
     padding: 0;
@@ -190,93 +198,160 @@ main h4 {
     font-size: 22px;
 }
 
-.habilidades ul li{
+.habilidades ul li {
     margin: .4rem 0;
 }
 
-.habilidades .boton{
+.habilidades .boton {
     background-image: linear-gradient(150deg,
-    #395dff,
-    #9FD4CA,
-    #343233);
+            #395dff,
+            #9FD4CA,
+            #343233);
     font-size: 15px;
     padding: 3px;
     margin: 13px 54px;
 }
 
-.contactame{
+/* articulo de proyectos */
+
+.proyectos {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.proyectos .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+    max-width: 1020px;
+    min-width: 515px;
+}
+
+.grid div {
+    position: relative;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border: 2px solid white;
+    border-radius: 20px;
+    overflow: hidden;
+
+}
+
+.grid div img {
+
+    height: auto;
+    width: 100%;
+    border-radius: 20px;
+    transition-duration: 1s;
+    cursor: pointer;
+    animation-name: revelar;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 30%;
+
+
+    &:hover {
+        scale: 1.2;
+    }
+}
+
+.grid div:first-child {
+    grid-column: 1 / 3;
+}
+
+.grid div:last-child {
+    grid-column: -1 / -3;
+}
+
+/* contactame */
+
+.contactame {
     display: flex;
     height: 90vh;
-    width: 100vw;
-    justify-content: center;
+    width: 100%;
+    justify-content: space-around;
     align-items: center;
     background: #343233;
+}
+
+form {
+    background: #9FD4CA;
+    box-shadow: -40px 0 #F9A470, -60px 0 #F5F5EB;
+    border-radius: 20px;
+    width: 40%;
 
 }
 
-form{
-
-}
-
-fieldset{
+fieldset {
     display: flex;
-    border: 2px solid #9FD4CA;
     height: 45vh;
-    width: 14vw;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    border: none;
 }
 
-legend h2{
-    color: #EFEAE1;
-    padding: 0 4px;
-    border-left: 1px solid #9FD4CA;
-    border-right: 1px solid #9FD4CA;
+
+
+
+/* pie de pagina */
+
+/* animaciones keyfame */
+
+@keyframes revelar {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
-fieldset input{
-    border-radius: 8px;
-    border: 3px solid ;
-    background: none;
-    text-align: center;
-    min-height: 7%;
+@keyframes caer {
+    0% {
+        transform: translateY(-140px);
+    }
+
+    25% {
+        transform: translateY(0px);
+    }
+
+    45% {
+        transform: translateY(-50px);
+    }
+
+    62% {
+        transform: translateY(0px);
+    }
+
+    78% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
 
-fieldset input::placeholder{
-    color: #9FD4CA;
-    text-align: center;
 
-}
+/* media quiery para mobiles */
 
-fieldset .empresa{
-    width: 70%;
-}
+@media screen and (max-width: 780px) {
 
-fieldset .correo{
-    width: 90%;
-}
-
-fieldset .mensaje{
-    height: 100px;
-}
-
-fieldset .mensaje{
-    height: 50%;
-    width: 95%;
-}
-
-@media screen and (max-width: 680px){
-
-    .contenedorComputadora{
+    .contenedorComputadora {
         width: 0;
     }
 
-    .cabeceraPrincipal{
+    .cabeceraPrincipal {
         display: none;
     }
 
-    .cabeceraMobile{
+    .cabeceraMobile {
         position: absolute;
         height: 100vh;
         width: 100vw;
@@ -284,7 +359,7 @@ fieldset .mensaje{
         flex-direction: column;
     }
 
-    .cabeceraMobile nav{
+    .cabeceraMobile nav {
         display: flex;
         flex-direction: column;
         height: 100vh;
@@ -297,9 +372,12 @@ fieldset .mensaje{
         transition: clip-path .4s;
     }
 
-    .cabeceraMobile nav:target{
+    .cabeceraMobile nav:target {
         clip-path: circle(150% at top left);
     }
-   
-    
+
+    .segundoContenedor {
+
+        padding: 20px;
+    }
 }
