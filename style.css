@@ -41,6 +41,7 @@ nav a {
     justify-content: space-between;
     padding: 4.5rem 6rem 0 6rem;
     min-height: 53vh;
+    margin-bottom: 15px;
     align-items: center;
 }
 
@@ -121,11 +122,11 @@ h1 span {
 
 main {
     width: 57rem;
-    min-height: 45vh;
     background-color: #FFFFFF;
     box-shadow: -200px 0 0 0px #9FD4CA, -230px 0 0 0px #F48E4F;
     border-radius: 20px 0 0 20px;
     min-height: 33rem;
+    padding-left: 20px;
 }
 
 main h2:first-child {
@@ -227,7 +228,7 @@ main h4 {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 10px;
     max-width: 1020px;
-    min-width: 515px;
+    min-width: 300px;
 }
 
 .grid div {
@@ -294,6 +295,8 @@ form {
     box-shadow: -40px 0 #F9A470, -60px 0 #F5F5EB;
     border-radius: 20px;
     width: 40%;
+    padding: 10px;
+
 }
 
 fieldset {
@@ -308,6 +311,33 @@ input {
     border: none;
     background: none;
     border-bottom: 1px solid black;
+}
+
+.contactame .enviar {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contactame button {
+    display: flex;
+    background: #354355;
+    height: 60px;
+    width: 216px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid #9FD4CA;
+    box-shadow: 5px 5px 10px black;
+    transition-duration: 300ms;
+    color: #F5F5EB;
+    cursor: pointer;
+
+
+    &&:hover {
+        transform: translateX(5px) translateY(5px);
+        box-shadow: none;
+        letter-spacing: 2px;
+    }
 }
 
 
@@ -490,12 +520,38 @@ footer aside a {
         transition: clip-path .4s;
     }
 
+    #contactame{
+        scroll-behavior: smooth;
+    }
+
     .cabeceraMobile nav:target {
         clip-path: circle(150% at top left);
+    }
+
+    .principal article {
+        justify-content: center;
+        min-height: 53vh;
+        align-items: center;
+        text-align: center;
+    }
+
+    .principal article .contenedorBoton {
+        display: flex;
+        justify-content: center;
     }
 
     .segundoContenedor {
 
         padding: 20px;
+    }
+
+    #sobreMi {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 10px 40px 10px;
+        box-shadow: none;
+        border-radius: 20px 20px 20px 20px;
     }
 }
